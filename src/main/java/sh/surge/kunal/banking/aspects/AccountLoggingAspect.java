@@ -19,7 +19,7 @@ public class AccountLoggingAspect {
     // Before advice
     // advice defines what to do and when to do it
     // this advice will be executed before the target method is executed
-	@Before("execution(* com.cognizant.banking.models.*.*(..))")
+	@Before("execution(* sh.surge.kunal.banking.models.*.*(..))")
 	public void logBeforeAccountMethods(JoinPoint joinPoint) throws Throwable {
         //JoinPoint is the pointcut
         // a pointcut is a method signature that matches the target method
@@ -34,7 +34,7 @@ public class AccountLoggingAspect {
     //Around advice
     //this advice will be executed before and after the target method is executed
     //this advice can also modify the arguments of the target method
-	@Around("execution(* com.cognizant.banking.models.*.*(..))")
+	@Around("execution(* sh.surge.kunal.banking.models.*.*(..))")
 	public Object logAroundAccountMethods(ProceedingJoinPoint joinPoint) throws Throwable {
 		//ProceedingJoinPoint is a special type of JoinPoint that allows the advice to modify the arguments of the target method
 
@@ -52,7 +52,7 @@ public class AccountLoggingAspect {
 	//After advice
     //this advice will be executed after the target method is executed
     //this advice will be executed even if the target method throws an exception
-	@After("execution(* com.cognizant.banking.models.*.*(..))")
+	@After("execution(* sh.surge.kunal.banking.models.*.*(..))")
 	public void logAfterAccountMethods(JoinPoint joinPoint) throws Throwable {
 		logger.info("AccountLoggingAspect: After logAccountMethod");
 		String methodName = joinPoint.getSignature().getName();

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class PerformanceAspect {
 	// Performance monitoring advice can be added here
 	Logger logger = LoggerFactory.getLogger(PerformanceAspect.class);
-	@Around("execution(* com.cognizant.banking.models.*.*(..))")
+	@Around("execution(* sh.surge.kunal.banking.models.*.*(..))")
     // @Around is used to define an around advice
     // pointcut is used to define the pointcut expression
 	public void monitorPerformance(ProceedingJoinPoint joinPoint) throws Throwable {
